@@ -7,7 +7,6 @@
   color: $mainColor;
   position: fixed;
   top: 0;
-  left: 0;
   z-index: 3;
   transition: all 1s ease;
 
@@ -22,21 +21,25 @@
       align-items: center;
 
       .logo {
-        margin-right: 40px;
         font-size: 40px;
         font-weight: 700;
         text-decoration: none;
         color: inherit;
+        margin-right: 40px;
       }
 
       .itemContainer {
-        margin-left: 30px;
         display: flex;
         align-items: center;
+        margin-left: 30px;
+
+        @include mobile {
+          display: none;
+        }
 
         .icon {
-          margin-right: 5px;
           font-size: 18px;
+          margin-right: 5px;
         }
 
         span {
@@ -48,11 +51,11 @@
 
     .right {
       .hamburger {
+        width: 32px;
+        height: 25px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 32px;
-        height: 25px;
         cursor: pointer;
 
         span {
